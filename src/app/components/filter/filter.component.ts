@@ -1,3 +1,4 @@
+import { FilterService } from './../../services/filter.service';
 import { ICategory } from './../../../models/categories.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,7 @@ export class FilterComponent implements OnInit {
 
   categories: ICategory[];
 
-  constructor() { }
+  constructor(private _filterService: FilterService) { }
 
   ngOnInit(): void {
   }
