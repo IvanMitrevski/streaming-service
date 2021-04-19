@@ -1,4 +1,7 @@
+import { IMovie } from './../../models/movie.model';
+import { ICategory } from './../../models/categories.model';
 import { Injectable } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +10,8 @@ export class FilterService {
 
   constructor() { }
 
-  getMovies() {
+  // By putting the type IMovie[] this service will now know the needed variables so you cannot make a mistake when entering a data
+  getMovies() : IMovie[] {
     return [
       {
         "id": 0,
@@ -48,11 +52,14 @@ export class FilterService {
     ];
   }
 
-  getCategories() {
+  // Same goes here, it will know that needs just an id and a name, nothing more, nothing less
+  getCategories() : ICategory[] {
     return [
       { "id": 0, "name": "DC" },
       { "id": 1, "name": "Star Wars" },
       { "id": 2, "name": "Marvel" }
     ];
   }
+
+  //this is why we use TypeScript, we use the types to improve our experience!
 }
