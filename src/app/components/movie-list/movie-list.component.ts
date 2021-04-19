@@ -1,3 +1,4 @@
+import { FilterService } from './../../services/filter.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _filterService = FilterService) { }
 
   ngOnInit(): void {
   }
