@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { FilterComponent } from './components/filter/filter.component';
 
+import { FilterService } from './services/filter.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { FilterComponent } from './components/filter/filter.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
