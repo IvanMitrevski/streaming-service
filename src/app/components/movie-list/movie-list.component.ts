@@ -1,3 +1,4 @@
+import { IMovie } from './../../../models/movie.model';
 import { FilterService } from './../../services/filter.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor(private _filterService = FilterService) { }
+  movies: IMovie[];
+
+  constructor(private _filterService: FilterService) { }
 
   ngOnInit(): void {
+    this.movies = this._filterService.getMovies();
+    console.log(this.movies);
   }
 
 }

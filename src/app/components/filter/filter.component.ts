@@ -14,6 +14,8 @@ export class FilterComponent implements OnInit {
   constructor(private _filterService: FilterService) { }
 
   ngOnInit(): void {
+    this.categories = this._filterService.getCategories();
+    console.log(this.categories);
   }
 
 }
