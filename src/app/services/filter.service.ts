@@ -50,9 +50,9 @@ export class FilterService {
 
   getCategories() {
     return [
-      { "id": 0, "name": "DC"},
-      { "id": 1, "name": "Star Wars"},
-      { "id": 2, "name": "Marvel"}
-    ]
+      { "id": 0, "name": "DC" },
+      { "id": 1, "name": "Star Wars" },
+      { "id": 2, "name": "Marvel" }
+    ];
   }
 }

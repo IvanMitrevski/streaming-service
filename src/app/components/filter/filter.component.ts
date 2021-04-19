@@ -1,3 +1,4 @@
+import { ICategory } from './../../../models/categories.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent implements OnInit {
+
+  categories: ICategory[];
 
   constructor() { }
 
