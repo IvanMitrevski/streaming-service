@@ -71,7 +71,7 @@ export class FilterService {
   onFilterChange(categoryId) {
 
     //making sure if I get an undefined value, to transform it to true or else return whetever it is true/false!
-    const boolValue = this.filterState[categoryId] === undefined ? true : categoryId;
+    const boolValue = this.filterState[categoryId] === undefined ? true : this.filterState[categoryId];
     // I use !boolValue cause I want to get the inverse value out of the filterState
     this.filterState[categoryId] = !boolValue;
     return this.filterState;
