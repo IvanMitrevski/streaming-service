@@ -1,12 +1,14 @@
 <div class="row">
-  <div class="col-3 mt4">
+  <div *ngFor="let movie of movies" class="col-3 mt4">
     <div class="card">
 
-      <img src="https://img.yts.mx/assets/images/movies/zack_snyders_justice_league_2021/medium-cover.jpg" alt="poster"
+      <img
+        [src]="movie.posterUrl"
+        alt="poster"
         class="card-img-top">
 
       <div class="card-body">
-        <h5 class="card-title">Movie name</h5>
+        <h5 class="card-title">{{movie.name}}</h5>
       </div>
 
     </div>
