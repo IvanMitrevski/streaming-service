@@ -6,6 +6,7 @@
         [id]="category.id"
         class="form-check-input"
         (click)="onFilterClick(category.id)"
+        [checked]="filterState[category.id] !== false"
         >
       <label [for]="category.id" class="form-check-label">{{category.name}}</label>
     </div>
