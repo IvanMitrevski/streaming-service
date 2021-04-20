@@ -19,7 +19,7 @@ export class FilterComponent implements OnInit {
   }
 
   onFilterClick(categoryId) {
-    console.log(categoryId);
+    this._filterService.onFilterChange(categoryId);
   }
 
 }

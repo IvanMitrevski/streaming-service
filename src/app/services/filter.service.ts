@@ -66,6 +66,10 @@ export class FilterService {
       { "id": 2, "name": "Marvel" }
     ];
   }
+  //^^^^ this is why we use TypeScript, we use the types(IMovie[] and ICategory[]) to improve our experience! ^^^^
 
-  //this is why we use TypeScript, we use the types to improve our experience!
+  onFilterChange(categoryId) {
+    console.log(categoryId);
+  }
+
 }
