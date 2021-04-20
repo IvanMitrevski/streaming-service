@@ -1,3 +1,4 @@
+import { IFilterState } from './../../models/filterState.model';
 import { IMovie } from './../../models/movie.model';
 import { ICategory } from './../../models/categories.model';
 import { Injectable } from '@angular/core';
@@ -8,7 +9,12 @@ import { Injectable } from '@angular/core';
 })
 export class FilterService {
 
-  constructor() { }
+  private filterState: IFilterState;
+
+  constructor() {
+    //initialize filterState to an empty object
+    this.filterState = {};
+   }
 
   // By putting the type IMovie[] this service will now know the needed variables so you cannot make a mistake when entering a data
   getMovies() : IMovie[] {

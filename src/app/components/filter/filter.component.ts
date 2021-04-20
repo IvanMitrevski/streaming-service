@@ -18,4 +18,8 @@ export class FilterComponent implements OnInit {
     console.log(this.categories);
   }
 
+  onFilterClick(categoryId) {
+    console.log(categoryId);
+  }
+
 }
