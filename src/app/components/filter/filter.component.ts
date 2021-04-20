@@ -1,3 +1,4 @@
+import { IFilterState } from './../../../models/filterState.model';
 import { FilterService } from './../../services/filter.service';
 import { ICategory } from './../../../models/categories.model';
 import { Component, OnInit } from '@angular/core';
@@ -10,8 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class FilterComponent implements OnInit {
 
   categories: ICategory[];
+  filterState: IFilterState;
 
-  constructor(private _filterService: FilterService) { }
+  constructor(private _filterService: FilterService) {
+    //to prevent crash from the start
+    this.filterState = {};
+   }
 
   ngOnInit(): void {
     this.categories = this._filterService.getCategories();
@@ -19,7 +24,8 @@ export class FilterComponent implements OnInit {
   }
 
   onFilterClick(categoryId) {
-    this._filterService.onFilterChange(categoryId);
+    this.filterState = this._filterService.onFilterChange(categoryId);
+    console.log(this.filterState);
   }
 
 }

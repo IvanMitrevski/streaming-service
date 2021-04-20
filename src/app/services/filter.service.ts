@@ -69,7 +69,13 @@ export class FilterService {
   //^^^^ this is why we use TypeScript, we use the types(IMovie[] and ICategory[]) to improve our experience! ^^^^
 
   onFilterChange(categoryId) {
-    console.log(categoryId);
+
+    //making sure if I get an undefined value, to transform it to true or else return whetever it is true/false!
+    const boolValue = this.filterState[categoryId] === undefined ? true : categoryId;
+    // I use !boolValue cause I want to get the inverse value out of the filterState
+    this.filterState[categoryId] = !boolValue;
+    return this.filterState;
+
   }
 
 }
